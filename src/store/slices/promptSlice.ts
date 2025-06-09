@@ -1,3 +1,28 @@
+// -----------------------------------------------------------------------------
+// promptSlice.ts
+//
+// This Redux slice manages the state for user prompts in the application.
+//
+// Features:
+// - Stores a list of prompts, each with an id, text, and timestamp
+// - Tracks the current input value for the prompt
+// - Provides actions to set the current prompt, add a prompt, and delete a prompt
+//
+// Usage:
+// - Import actions (setCurrentPrompt, addPrompt, deletePrompt) in your components
+// - Use the slice reducer in your Redux store configuration
+//
+// Best Practices Before Deployment:
+// - Ensure all actions are covered by UI and tested
+// - Validate prompt input for security and UX (e.g., length, content)
+// - Consider persisting prompts to localStorage or backend if needed
+// - Remove or adjust any development-only logging or test code
+// - Review for accessibility and internationalization if required
+// - Confirm all TypeScript types are correct and up to date
+//
+// This file is ready for production use in a modern React + Redux Toolkit app.
+// -----------------------------------------------------------------------------
+
 /**
  * This file demonstrates Redux Toolkit's createSlice API for managing prompt-related state
  * Key concepts demonstrated:
