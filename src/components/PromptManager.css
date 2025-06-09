@@ -1,51 +1,178 @@
 .prompt-manager {
   width: 100%;
   max-width: 600px;
-  margin: 2rem auto;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f6f8fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(60, 80, 120, 0.08);
+}
+
+.redux-info {
+  background: #e9eef5;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #c3d0ee;
+}
+
+.redux-info h3 {
+  color: #2a6ec9;
+  margin: 0 0 12px 0;
+  font-size: 1.1em;
+}
+
+.state-info {
+  text-align: left;
+}
+
+.state-info p {
+  margin: 0;
+  color: #888;
+}
+
+.state-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+.state-info li {
+  margin: 4px 0;
+  font-size: 0.9em;
+}
+
+.state-value {
+  color: #2a6ec9;
+  font-family: monospace;
+  background: #e3e8ee;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.input-container,
+.button-container,
+.delete-container {
+  position: relative;
+}
+
+.action-info {
+  position: absolute;
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+.action-info code {
+  background: #e3e8ee;
+  color: #2a6ec9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.prompt-form {
+  margin-bottom: 40px;
 }
 
 .prompt-input {
-  width: 100%;
-  padding: 0.8em;
-  margin-bottom: 1em;
-  border: 2px solid #646cff;
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #2a6ec9;
   border-radius: 8px;
-  background: transparent;
-  color: inherit;
-  font-size: 1em;
+  background: #fff;
+  color: #222b38;
+  font-size: 1.1em;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  text-shadow: none;
+}
+
+.prompt-input::placeholder {
+  color: #b0b8c9;
+  opacity: 1;
 }
 
 .prompt-input:focus {
   outline: none;
-  border-color: #535bf2;
+  border-color: #1a4e8a;
+  background: #f6f8fa;
+  box-shadow: 0 0 0 3px #e3e8ee;
+}
+
+.prompt-input:hover {
+  background: #f6f8fa;
 }
 
 .prompt-list {
-  margin-top: 2rem;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.prompt-list h3 {
+  color: #2a6ec9;
+  margin-bottom: 16px;
+  text-align: left;
 }
 
 .prompt-item {
-  background: rgba(255, 255, 255, 0.05);
+  background: #fff;
   border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  padding: 16px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(60, 80, 120, 0.04);
+}
+
+.prompt-item:hover {
+  transform: translateY(-2px);
+}
+
+.prompt-text {
+  margin: 0 0 12px 0;
+  font-size: 1.1em;
+  color: #222b38;
 }
 
 .prompt-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0.5rem;
-  font-size: 0.8em;
+  font-size: 0.9em;
+}
+
+.prompt-timestamp {
   color: #888;
 }
 
 .delete-btn {
-  background: #ff4444;
-  padding: 0.3em 0.6em;
-  font-size: 0.8em;
+  padding: 6px 12px;
+  background-color: #e05a47;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
 }
 
 .delete-btn:hover {
-  border-color: #ff6666;
+  background-color: #c13d2a;
+}
+
+.no-prompts {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+  font-style: italic;
+}
+
+.redux-event-desc {
+  margin-bottom: 18px;
+  color: #2aaf40;
+  font-weight: 500;
 }
